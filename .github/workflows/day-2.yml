@@ -1,1 +1,28 @@
 
+
+name: Day 2 - Multiple Commands
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  practice:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Welcome Message
+        run: echo "Welcome to GitHub Actions Day 2!"
+
+      - name: Show Date
+        run: date
+
+      - name: Show Current Directory
+        run: pwd
+
+      - name: List Files
+        run: ls -la
+
+      - name: Finish Message
+        run: echo "My Day 2 practice is completed!"
