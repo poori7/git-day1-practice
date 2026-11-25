@@ -1,0 +1,33 @@
+
+name: Run Python Code
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  python-job:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Run Python program
+        run: |
+          python -c '
+          print("Hello Poornima!")
+
+          a = 10
+          b = 20
+
+          total = a + b
+
+          print("Total:", total)
+          '
