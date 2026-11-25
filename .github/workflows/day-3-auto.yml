@@ -1,1 +1,32 @@
 
+
+name: Day 3 - Auto Workflow
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+jobs:
+  day3-practice:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Step 1 - Welcome
+        run: echo "Welcome to Day 3 GitHub Actions"
+
+      - name: Step 2 - Show Repository
+        run: echo "Repository workflow is running"
+
+      - name: Step 3 - Show Date
+        run: date
+
+      - name: Step 4 - Show Current Directory
+        run: pwd
+
+      - name: Step 5 - List Files
+        run: ls -la
+
+      - name: Step 6 - Success Message
+        run: echo "Day 3 completed successfully"
